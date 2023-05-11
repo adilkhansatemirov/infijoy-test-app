@@ -63,3 +63,10 @@ The application provides the following API endpoints for managing users:
 - `PUT /api/users/:id`: Update an existing user.
 - `DELETE /api/users/:id`: Delete a user.
 
+## Author
+
+In case if the project fails to run or you have questions feel free to contact me
+
+Email: adilkhansatemirov@gmail.com
+Telegram: @adilkhangsta
+
