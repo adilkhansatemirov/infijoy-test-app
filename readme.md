@@ -28,7 +28,7 @@ To get started with the application, follow the instructions below.
 3. Create a `.env` file in the root directory with the following env variables:
 
    - Set the `MONGO_URI` environment variable to the connection URL of your MongoDB instance. You can do this by either:
-     - Creating a `.env` file in the project root directory and adding the following line:
+     - Creating a `.env` file in the project root directory and adding the following config:
        ```
        MONGO_URI=mongodb+srv://adilkhansatemirov:testpass0@cluster0.fr8uhqe.mongodb.net/infijoy-test-app?retryWrites=true&w=majority
        NODE_ENV=development
