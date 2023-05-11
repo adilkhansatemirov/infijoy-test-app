@@ -1,8 +1,6 @@
 const errorHandler = (err, req, res, next) => {
   const statusCode = res.statusCode ? res.statusCode : 500;
 
-  console.log("activate error handler");
-
   res.status(statusCode);
 
   res.json({
@@ -11,4 +9,4 @@ const errorHandler = (err, req, res, next) => {
   });
 };
 
-export default { errorHandler };
+export default errorHandler;

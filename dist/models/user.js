@@ -14,10 +14,20 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
+    address: {
+        type: String,
+        required: false,
+        default: "",
+    },
+    description: {
+        type: String,
+        required: false,
+        default: "",
+    },
     date_of_birth: {
         type: Date,
         default: Date.now,
     },
 }, { timestamps: true });
 export default mongoose.model("user", userSchema);
-//# sourceMappingURL=user.js.map
+//# sourceMappingURL=User.js.map
