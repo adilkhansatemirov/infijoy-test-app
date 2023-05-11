@@ -37,6 +37,17 @@ const createUserMockValue = {
   updated_at: "2021-01-01T00:00:00.000Z",
 };
 
+const updateUserMockValue = {
+  _id: userId,
+  email: "updated.john.doe@example.com",
+  name: "Updated John Doe",
+  address: "",
+  description: "",
+  date_of_birth: "2021-01-01T00:00:00.000Z",
+  created_at: "2021-01-01T00:00:00.000Z",
+  updated_at: "2021-01-01T00:00:00.000Z",
+};
+
 describe("users routes", () => {
   describe("GET /api/users", () => {
     it("should return 200 status code", async () => {
@@ -119,8 +130,13 @@ describe("users routes", () => {
 
   describe("PUT /api/users/:id", () => {
     it("should return 200 status code", async () => {
-      const response = await request(app).put("/api/users/1");
+      const updateUserServiceMock = jest
+        .spyOn(UsersService, "updateUser")
+        .mockResolvedValue(updateUserMockValue as any);
 
+      const response = await request(app).put(`/api/users/${userId}`);
+
+      expect(updateUserServiceMock).toHaveBeenCalled();
       expect(response.status).toBe(200);
     });
   });
